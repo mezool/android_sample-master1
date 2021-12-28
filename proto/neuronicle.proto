@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option java_outer_classname = "NeuroNicleProto";
+option objc_class_prefix = "NN";
+
+package neuronicle;
+
+service EEG {
+  rpc Start (stream ConversionRequest) returns (stream ConversionReply) {}
+  rpc Verify (ConnectionRequest) returns (ConnectionReply) {}
+  rpc FinishConnection (FinishRequest) returns (FinishReply) {}
+}
+
+message ConversionRequest {
+  repeated int32 ch1 = 1;
+  repeated int32 ch2 = 2;
+  string client_code = 3;
+}
+
+message ConversionReply {
+  map<string, int32> data = 1;
+}
+
+message ConnectionRequest {
+  string client_code = 1;
+}
+
+message ConnectionReply {
+  string message = 1;
+}
+
+message FinishRequest {
+  string client_code = 1;
+}
+
+message FinishReply {
+  bool ok = 1;
+}

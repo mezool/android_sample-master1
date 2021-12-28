@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff8e3c</color>
+    <color name="colorPrimaryDark">#0d0d0d</color>
+    <color name="colorAccent">#d9376e</color>
+    <color name="colorHeadLine">#0d0d0d</color>
+    <color name="colorParagraph">#2a2a2a</color>
+    <color name="colorLightDark">#aaaaaa</color>
+    <color name="colorGraph">#3DB37B</color>
+    <color name="colorhomegamen">#4521F3DB</color>
+</resources>
